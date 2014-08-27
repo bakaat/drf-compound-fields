@@ -21,7 +21,8 @@ class ListField(WritableField):
     be another field type (e.g., CharField) or a serializer. However, for serializers, you should
     instead just use it with the `many=True` option.
     """
-
+    type_label = 'array'
+    type_name = 'ListField'
     default_error_messages = {
         'invalid_type': _('%(value)s is not a list'),
     }
